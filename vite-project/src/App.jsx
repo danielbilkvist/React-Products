@@ -15,3 +15,5 @@ function App() {
 }
 
 export default App;
+
+//cd vite-project && npm run dev
