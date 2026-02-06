@@ -1,3 +1,5 @@
+import{Link} from "react-router"
+
 export default function Product({ product }) {
   /*let stockText = product.inStock ? "På Lager" : "Udsolgt";
     let stockClass = product.inStock ? "in-stock" : "out-of-stock";
@@ -12,6 +14,7 @@ export default function Product({ product }) {
     }*/
   
   return (
+    <Link to = {`/products/${product.id}`} className="product-card-link">
     <article className="product">
       <img src={product.image} alt={product.title} className="product-image" />
       <h2 className="product-title">{product.title || "Unavngivet produkt"}</h2>
@@ -23,6 +26,7 @@ export default function Product({ product }) {
       </span>
       {product.price < 20 && console.log(`${product.title} er et godt tilbud!!!`)}
     </article>
+    </Link>
   );
   
 }

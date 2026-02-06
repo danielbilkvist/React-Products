@@ -1,10 +1,14 @@
+import ProductGrid from "../Components/ProductGrid";
+
 export default function ProductPage() {
   return (
     <>
-      <h1>Produkter</h1>
-      <p>
-        Produkt Oversigt
-      </p>
+      <header>
+        <h1>Products</h1>
+      </header>
+      <main>
+        <ProductGrid />
+      </main>
     </>
   );
 }
