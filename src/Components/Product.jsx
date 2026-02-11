@@ -28,16 +28,15 @@ export default function Product({ product }) {
           {product.description || "Ingen beskrivelse"}
         </p>
         <p className="product-price">Pris: {product.price || "???"} kr</p>
-        <span
-          className={`product-stock ${product.inStock ? "in-stock" : "out-of-stock"}`}
-        >
-          {product.inStock ? "På Lager" : "Udsolgt"}
-        </span>
-        {product.price < 20 &&
-          console.log(`${product.title} er et godt tilbud!!!`)}
+  
       </article>
     </Link>
   );
   
 }
 
+/*      <span
+          className={`product-stock ${product.inStock ? "in-stock" : "out-of-stock"}`}
+        >
+          {product.inStock ? "På Lager" : "Udsolgt"}
+        </span>*/

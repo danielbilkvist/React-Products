@@ -1,4 +1,11 @@
-export default function HomePage() {
+import { useEffect } from "react";
+
+export default function AboutPage() {
+
+  useEffect(() => {
+    document.title = "About - DenDanskeButik";
+  }, []);
+
   return (
     <>
       <h1>Om os</h1>

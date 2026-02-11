@@ -18,6 +18,10 @@ export default function ProductDetail() {
     fetchProducts();
   }, [productId]);
 
+   useEffect(() => {
+     document.title = `${product.title} - DenDanskeButik`;
+   }, [product, product.title]);
+
   return (
     <div className="product-detail-page">
       <header>

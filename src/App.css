@@ -1,7 +1,6 @@
 #root {
-  max-width: 1280px;
+  max-width: auto;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 
@@ -32,7 +31,7 @@ main {
 }
 
 nav {
-  background-color: #31d031;
+  background-color: #d0ab31;
   padding: 1rem 2rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
@@ -42,6 +41,7 @@ nav {
   position: sticky;
   top: 0;
   z-index: 100;
+  gap: 0.5rem;
 }
 
 nav a {
@@ -63,7 +63,7 @@ nav a.active {
 }
 
 nav a.active:hover {
-  color: #31d031;
+  color: #585858;
 }
 
 .hero-image {
@@ -83,10 +83,10 @@ nav a.active:hover {
 }
 .product {
   color: black;
-  background: white;
+  /*background: white;*/
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  /*box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);*/
   transition:
   transform 0.3s ease,
   box-shadow 0.3s ease;
@@ -95,8 +95,9 @@ nav a.active:hover {
 
 .product:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 255, 55, 0.2);
-  background-color: #e0fae0;
+  /*box-shadow: 0 8px 16px rgba(0, 255, 55, 0.2);*/
+  border: #d08631 solid 1px;
+  background-color: #faece0;
 }
 
 .product img {
@@ -104,7 +105,8 @@ nav a.active:hover {
   height: 250px;
   object-fit: contain;
   background-color: #ecf0f1;
-  border-radius: 4px;
+  border-radius: 8px;
+  box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .product-title {
@@ -133,7 +135,11 @@ nav a.active:hover {
 .product-price {
   font-size: 1rem;
   font-weight: bold;
-  color: #27ae60;
+  color: #2e2e2e;
+  text-decoration: underline;
+  display: flex;
+  justify-content: right;
+  padding: 0 4px;;
 }
 
 .product-stock {
