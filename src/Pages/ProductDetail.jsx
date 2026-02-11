@@ -19,23 +19,25 @@ export default function ProductDetail() {
   }, [productId]);
 
   return (
-    <>
+    <div className="product-detail-page">
       <header>
         <h1>{product.title}</h1>
-        <h2>{product.category}</h2>
-        <h2>Price: ${product.price} Dkk</h2>
       </header>
       <main>
         <img src={product.image} alt={product.title} />
-        <p>
-          {params.id}: {product.description}
-        </p>
-        <span
-          className={`product-stock ${product.inStock ? "in-stock" : "out-of-stock"}`}
-        >
-          {product.inStock ? "På Lager" : "Udsolgt"}
-        </span>
+        <div className="product-text">
+          <h2>Price: ${product.price} Dkk</h2>
+          <h2>{product.category}</h2>
+          <p>
+            {params.id}: {product.description}
+          </p>
+          <span
+            className={`product-stock ${product.inStock ? "in-stock" : "out-of-stock"}`}
+          >
+            {product.inStock ? "På Lager" : "Udsolgt"}
+          </span>
+        </div>
       </main>
-    </>
+    </div>
   );
 }

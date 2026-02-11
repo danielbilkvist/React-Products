@@ -15,15 +15,14 @@ body {
 }
 
 header {
-  background-color: #31d031;
-  color: white;
+  /*background-color: #31d031;*/
+  color: rgb(0, 0, 0);
   text-align: center;
-  padding: 2rem 5rem;
+  padding: 0.2rem 2rem;
 }
 
 header h1 {
   font-size: 2.5rem;
-  margin-bottom: 0.5rem;
 }
 
 main {
@@ -38,7 +37,7 @@ nav {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
   display: flex;
-  justify-content: center;
+  justify-content: left;
 
   position: sticky;
   top: 0;
@@ -64,7 +63,17 @@ nav a.active {
 }
 
 nav a.active:hover {
-  color:#31d031
+  color: #31d031;
+}
+
+.hero-image {
+  width: 100vw;
+  height: auto;
+  object-fit: cover;
+  margin-left: calc(-50vw + 50%);
+  max-width: 100vw;
+  display: block;
+  overflow: hidden;
 }
 
 .product-grid {
@@ -79,8 +88,8 @@ nav a.active:hover {
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  transform 0.3s ease,
+  box-shadow 0.3s ease;
   padding: 1rem;
 }
 
@@ -125,7 +134,6 @@ nav a.active:hover {
   font-size: 1rem;
   font-weight: bold;
   color: #27ae60;
-  margin-bottom: 1rem;
 }
 
 .product-stock {
@@ -141,6 +149,16 @@ nav a.active:hover {
 .product-stock.out-of-stock {
   color: #c0392b;
   background-color: #f5b7b1;
+}
+
+.product-detail-page main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
 }
 
 footer {
