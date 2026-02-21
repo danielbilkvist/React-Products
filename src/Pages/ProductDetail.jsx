@@ -1,5 +1,6 @@
 import { useParams } from "react-router";
 import { useEffect, useState } from "react";
+import styles from "./ProductDetail.module.css";
 
 export default function ProductDetail() {
   const params = useParams();
@@ -23,13 +24,13 @@ export default function ProductDetail() {
    }, [product, product.title]);
 
   return (
-    <div className="product-detail-page">
+    <div className={styles.productDetail}>
       <header>
         <h1>{product.title}</h1>
       </header>
       <main>
         <img src={product.image} alt={product.title} />
-        <div className="product-text">
+        <div className={styles.productInfo}>
           <h2>Price: ${product.price} Dkk</h2>
           <h2>{product.category}</h2>
           <p>

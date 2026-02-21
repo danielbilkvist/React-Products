@@ -1,4 +1,5 @@
 import Product from "./Product";
+import styles from "./ProductGrid.module.css";
 import { useState, useEffect, } from "react";
 //import {products} from '../data.js';
 export default function ProductGrid() {
@@ -16,7 +17,7 @@ export default function ProductGrid() {
   }, []);
 
   return (
-    <section className="product-grid">
+    <section className={styles["product-grid"]}>
       {products.map((product) => (
         <Product key={product.id} product={product} />
       ))}

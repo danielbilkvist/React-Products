@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import styles from "./AboutPage.module.css";
 
 export default function AboutPage() {
 
@@ -8,6 +9,7 @@ export default function AboutPage() {
 
   return (
     <>
+    <main className={styles.aboutMain}>
       <h1>Om os</h1>
       <p>
         Vi tilbyder et bredt udvalg af produkter til konkurrencedygtige priser.
@@ -16,6 +18,7 @@ export default function AboutPage() {
         hurtig levering og fremragende kundeservice. Gå på opdagelse i vores
         sortiment og find dine nye favoritter i dag!
       </p>
+    </main>
     </>
   );
 }

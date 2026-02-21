@@ -1,4 +1,5 @@
-import{Link} from "react-router"
+import { Link } from "react-router";
+import styles from "./Product.module.css";
 
 export default function Product({ product }) {
   /*let stockText = product.inStock ? "På Lager" : "Udsolgt";
@@ -12,27 +13,25 @@ export default function Product({ product }) {
         stockText = "Udsolgt";
         stockClass = "out-of-stock";
     }*/
-  
+
   return (
-    <Link to={`/products/${product.id}`} className="product-card-link">
-      <article className="product">
+    <Link to={`/products/${product.id}`} className={styles.product}>
+      <article className={styles["product-card"]}>
         <img
           src={product.image}
           alt={product.title}
-          className="product-image"
+          className={styles["product-image"]}
         />
-        <h2 className="product-title">
+        <h2 className={styles["product-title"]}>
           {product.title || "Unavngivet produkt"}
         </h2>
-        <p className="product-description">
+        <p className={styles["product-description"]}>
           {product.description || "Ingen beskrivelse"}
         </p>
-        <p className="product-price">Pris: {product.price || "???"} kr</p>
-  
+        <p className={styles["product-price"]}>Pris: {product.price || "???"} kr</p>
       </article>
     </Link>
   );
-  
 }
 
 /*      <span

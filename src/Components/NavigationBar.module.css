@@ -1,0 +1,52 @@
+.navigationBar {
+  background-color: #fec556;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  justify-content: right;
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  gap: 0.5rem;
+}
+
+.link {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.link:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #2f2f2f;
+}
+
+.link:global(.active) {
+  background-color: #fffbf3;
+  color: #000000;
+}
+
+.link.link:global(.active):hover {
+  color: #000000;
+}
+
+.logo {
+  margin-right: auto;
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+.logo:hover {
+  background-color: #fec556;
+  color: #000000;
+}
+
+.logo img {
+  height: 60px;
+  margin-right: auto;
+}
